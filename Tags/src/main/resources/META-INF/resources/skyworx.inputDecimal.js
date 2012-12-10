@@ -11,7 +11,11 @@
                 alert('else');
             }
             
+           
+            
             $super.constructor.call(this, componentId);
+            
+//            $super.options = options;
             
             this.element = $(document.getElementById(componentId));
             this.element.bind("blur", $.proxy(this.__blurHandler, this));
