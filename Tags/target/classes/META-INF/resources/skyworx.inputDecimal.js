@@ -11,11 +11,9 @@
                 alert('else');
             }
             
-           
+            $super.options = options;
             
             $super.constructor.call(this, componentId);
-            
-//            $super.options = options;
             
             this.element = $(document.getElementById(componentId));
             this.element.bind("blur", $.proxy(this.__blurHandler, this));
@@ -32,3 +30,4 @@
     });
     var $super = rf.ui.InputDecimal.$super;
 })(jQuery, RichFaces);
+
