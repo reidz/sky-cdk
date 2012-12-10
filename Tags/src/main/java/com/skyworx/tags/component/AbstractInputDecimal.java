@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.skyworx.tags;
+package com.skyworx.tags.component;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.UIInput;
 import org.richfaces.cdk.annotations.Attribute;
 import org.richfaces.cdk.annotations.EventName;
 import org.richfaces.cdk.annotations.JsfComponent;

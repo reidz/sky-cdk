@@ -13,6 +13,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import org.richfaces.renderkit.ComponentAttribute;
 import org.richfaces.renderkit.HtmlConstants;
+import org.richfaces.renderkit.InputRendererBase;
 import org.richfaces.renderkit.RenderKitUtils;
 import org.richfaces.renderkit.RendererBase;
 
@@ -28,7 +29,7 @@ import org.richfaces.renderkit.RendererBase;
     @ResourceDependency(name = "richfaces-base-component.js", target = "head"),
     @ResourceDependency(name = "skyworx.inputDecimal.js", target = "head")
 })
-public abstract class InputDecimalRendererBase extends RendererBase{
+public abstract class InputDecimalRendererBase extends InputRendererBase{
     
     protected static final Map<String, ComponentAttribute> INPUT_DECIMAL_HANDLER_ATTRIBUTES = Collections
         .unmodifiableMap(ComponentAttribute.createMap(

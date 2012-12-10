@@ -16,7 +16,7 @@ import org.richfaces.renderkit.RenderKitUtils.ScriptHashVariableWrapper;
 public class InputDecimalRenderer extends InputDecimalRendererBase {
 	
 private static final Attributes ATTRIBUTES_FOR_SCRIPT_HASH0 = attributes()
-	     .generic("onblur","onblur","blur")
+	     .generic("onblur","onblur")
 	     
 ;
 	

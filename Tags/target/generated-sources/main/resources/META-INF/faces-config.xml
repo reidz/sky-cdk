@@ -75,7 +75,7 @@
             </property-extension>
         </property>
         <component-extension>
-            <cdk:base-class>com.skyworx.tags.AbstractInputDecimal</cdk:base-class>
+            <cdk:base-class>com.skyworx.tags.component.AbstractInputDecimal</cdk:base-class>
             <cdk:generate>true</cdk:generate>
             <cdk:tag>
                 <cdk:generate>false</cdk:generate>
@@ -90,8 +90,8 @@
         <description>
  @author ricko
 </description>
-        <component-type>com.skyworx.tags.InputDecimal</component-type>
-        <component-class>com.skyworx.tags.component.UIInputDecimal</component-class>
+        <component-type>javax.faces.Input</component-type>
+        <component-class>com.skyworx.tags.component.UIInputDecimal4</component-class>
         <property>
             <description>The value binding expression used to wire up this
             component to a component property of a JavaBean class</description>
@@ -148,11 +148,15 @@
             </property-extension>
         </property>
         <property>
-            <property-name>onblur</property-name>
-            <property-class>java.lang.String</property-class>
+            <description>
+			Converter instance registered with this component.
+        </description>
+            <display-name>Converter</display-name>
+            <icon/>
+            <property-name>converter</property-name>
+            <property-class>javax.faces.convert.Converter</property-class>
             <property-extension>
-                <cdk:event-name default="true">blur</cdk:event-name>
-                <cdk:generate>true</cdk:generate>
+                <cdk:generate>false</cdk:generate>
                 <cdk:hidden>false</cdk:hidden>
                 <cdk:literal>false</cdk:literal>
                 <cdk:pass-through>false</cdk:pass-through>
@@ -160,22 +164,196 @@
                 <cdk:required>false</cdk:required>
             </property-extension>
         </property>
+        <property>
+            <description>
+			The current value of this component.
+        </description>
+            <display-name>Value</display-name>
+            <icon/>
+            <property-name>value</property-name>
+            <property-class>java.lang.Object</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			A ValueExpression enabled attribute that, if present, will be
+			used as the text of the converter message, replacing any message
+			that comes from the converter.
+        </description>
+            <display-name>Converter Message</display-name>
+            <icon/>
+            <property-name>converterMessage</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			Flag indicating that this component's value must be
+			converted and validated immediately (that is, during
+			Apply Request Values phase), rather than waiting
+			until Process Validations phase.
+        </description>
+            <display-name>Immediate Action</display-name>
+            <icon/>
+            <property-name>immediate</property-name>
+            <property-class>boolean</property-class>
+            <default-value>Boolean.FALSE</default-value>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			Flag indicating that the user is required to provide a submitted
+			value for this input component.
+        </description>
+            <display-name>Required Flag</display-name>
+            <icon/>
+            <property-name>required</property-name>
+            <property-class>boolean</property-class>
+            <default-value>Boolean.FALSE</default-value>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			A ValueExpression enabled attribute that, if present, will be
+			used as the text of the validation message for the "required"
+			facility, if the "required" facility is used.
+        </description>
+            <display-name>Required Message</display-name>
+            <icon/>
+            <property-name>requiredMessage</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			MethodExpression representing a validator method that will be called
+			during Process Validations to perform correctness checks on the
+			value of this component. The expression must evaluate to a public
+			method that takes FacesContext, UIComponent, and Object parameters,
+			with a return type of void.
+        </description>
+            <display-name>Validator</display-name>
+            <icon/>
+            <property-name>validator</property-name>
+            <property-class>javax.faces.el.MethodBinding</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+                <cdk:signature>
+                    <cdk:param>javax.faces.context.FacesContext</cdk:param>
+                    <cdk:param>javax.faces.component.UIComponent</cdk:param>
+                    <cdk:param>java.lang.Object</cdk:param>
+                    <cdk:return-type>java.lang.Void</cdk:return-type>
+                </cdk:signature>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			A ValueExpression enabled attribute that, if present, will be
+			used as the text of the validator message, replacing any
+			message that comes from the validator.
+        </description>
+            <display-name>Validator Message</display-name>
+            <icon/>
+            <property-name>validatorMessage</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			&lt;p&gt;
+
+			MethodExpression representing a value change listener method
+			that will be notified when a new value has been set for this
+			input component. The expression must evaluate to a public
+			method that takes a &lt;code&gt;ValueChangeEvent&lt;/code&gt; parameter,
+			with a return type of void, &lt;span class="changed_added_2_0"&gt;or
+			to a public method that takes no arguments with a return type
+			of void. In the latter case, the method has no way of easily
+			knowing what the new value is, but this can be useful in cases
+			where a notification is needed that "this value
+			changed".&lt;/span&gt;
+
+			&lt;/p&gt; </description>
+            <display-name>Value Change Listener</display-name>
+            <icon/>
+            <property-name>valueChangeListener</property-name>
+            <property-class>javax.faces.el.MethodBinding</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+                <cdk:signature>
+                    <cdk:param>javax.faces.event.ValueChangeEvent</cdk:param>
+                    <cdk:return-type>java.lang.Void</cdk:return-type>
+                </cdk:signature>
+            </property-extension>
+        </property>
         <component-extension>
-            <cdk:base-class>com.skyworx.tags.AbstractInputDecimal</cdk:base-class>
-            <cdk:generate>true</cdk:generate>
+            <cdk:base-class>com.skyworx.tags.component.UIInputDecimal4</cdk:base-class>
+            <cdk:generate>false</cdk:generate>
             <cdk:tag>
                 <cdk:generate>false</cdk:generate>
-                <cdk:tag-name>inputDecimal</cdk:tag-name>
+                <cdk:tag-name>inputDecimal4</cdk:tag-name>
                 <cdk:tag-type>Facelets</cdk:tag-type>
             </cdk:tag>
-            <cdk:component-family>com.skyworx.tags.InputDecimal</cdk:component-family>
+            <cdk:component-family>javax.faces.Input</cdk:component-family>
             <cdk:renderer-type>com.skyworx.InputDecimalRenderer</cdk:renderer-type>
         </component-extension>
     </component>
     <render-kit>
         <render-kit-id>HTML_BASIC</render-kit-id>
         <renderer>
-            <component-family>com.skyworx.tags.InputDecimal</component-family>
+            <component-family>javax.faces.Input</component-family>
             <renderer-type>com.skyworx.InputDecimalRenderer</renderer-type>
             <renderer-class>com.skyworx.renderkit.InputDecimalRenderer</renderer-class>
             <renderer-extension>

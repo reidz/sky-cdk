@@ -35,7 +35,7 @@ import javax.faces.component.behavior.ClientBehaviorHolder;
 import javax.el.MethodExpression;
 import javax.el.ValueExpression;
 import javax.faces.component.StateHelper;
-import com.skyworx.tags.AbstractInputDecimal;
+import com.skyworx.tags.component.AbstractInputDecimal;
 
 /**
  * 
