@@ -14,10 +14,16 @@
     <cc:implementation>
         <input id="#{clientId}" 
                    name="#{clientId}" 
-                   type="text"/>
+                   type="text">
+            <cdk:call expression="renderInputHandlers(facesContext, component);" />
+        </input>
         <script type="text/javascript">
-            new RichFaces.ui.InputDecimal("#{clientId}");
+            
+            <cdk:scriptObject name="options">
+                <cdk:scriptOption attributes="onblur"
+                            wrapper="eventHandler" />
+            </cdk:scriptObject>
+            new RichFaces.ui.InputDecimal("#{clientId}", "#{toScriptArgs(options)}");
         </script>
     </cc:implementation>
-
 </cdk:root>

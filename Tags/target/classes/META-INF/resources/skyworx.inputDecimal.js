@@ -3,13 +3,14 @@
     rf.ui.InputDecimal= rf.BaseComponent.extendClass({
         // class name
         name:"InputDecimal",
-        init: function (componentId) {
+        init: function (componentId, options) {
             if (!document.getElementById(componentId)) {
                 throw "No element with id '" + componentId + "' found.";
             }
             else{
                 alert('else');
             }
+            
             $super.constructor.call(this, componentId);
             
             this.element = $(document.getElementById(componentId));

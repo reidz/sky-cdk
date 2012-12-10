@@ -4,8 +4,16 @@
  */
 package com.skyworx.renderkit;
 
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import org.richfaces.renderkit.ComponentAttribute;
+import org.richfaces.renderkit.HtmlConstants;
+import org.richfaces.renderkit.RenderKitUtils;
 import org.richfaces.renderkit.RendererBase;
 
 /**
@@ -21,4 +29,15 @@ import org.richfaces.renderkit.RendererBase;
     @ResourceDependency(name = "skyworx.inputDecimal.js", target = "head")
 })
 public abstract class InputDecimalRendererBase extends RendererBase{
+    
+    protected static final Map<String, ComponentAttribute> INPUT_DECIMAL_HANDLER_ATTRIBUTES = Collections
+        .unmodifiableMap(ComponentAttribute.createMap(
+            new ComponentAttribute(HtmlConstants.ONBLUR_ATTRIBUTE).setEventNames("blur")
+            .setComponentAttributeName("onblur")
+            ));
+    
+    public void renderInputHandlers(FacesContext facesContext, UIComponent component) throws IOException {
+        RenderKitUtils.renderPassThroughAttributesOptimized(facesContext, component, INPUT_DECIMAL_HANDLER_ATTRIBUTES);
+    }
+    
 }
