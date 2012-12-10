@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<faces-config version="2.0" metadata-complete="false" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:cdk="http://jboss.org/schema/richfaces/cdk/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <component>
+        <description>
+ @author ricko
+</description>
+        <component-type>com.skyworx.tags.InputDecimal</component-type>
+        <component-class>com.skyworx.tags.component.UIInputDecimal</component-class>
+        <property>
+            <description>The value binding expression used to wire up this
+            component to a component property of a JavaBean class</description>
+            <display-name></display-name>
+            <icon/>
+            <property-name>binding</property-name>
+            <property-class>javax.faces.component.UIComponent</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			The component identifier for this component. This value must be
+			unique within the closest parent component that is a naming
+			container.
+        </description>
+            <display-name>Component Identifier</display-name>
+            <icon/>
+            <property-name>id</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			Flag indicating whether or not this component should be rendered
+			(during Render Response Phase), or processed on any subsequent
+			form submit. The default value for this property is true.
+        </description>
+            <display-name>Rendered Flag</display-name>
+            <icon/>
+            <property-name>rendered</property-name>
+            <property-class>boolean</property-class>
+            <default-value>Boolean.FALSE</default-value>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <property-name>onblur</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:event-name default="true">blur</cdk:event-name>
+                <cdk:generate>true</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <component-extension>
+            <cdk:base-class>com.skyworx.tags.AbstractInputDecimal</cdk:base-class>
+            <cdk:generate>true</cdk:generate>
+            <cdk:tag>
+                <cdk:generate>false</cdk:generate>
+                <cdk:tag-name>inputDecimal</cdk:tag-name>
+                <cdk:tag-type>Facelets</cdk:tag-type>
+            </cdk:tag>
+            <cdk:component-family>com.skyworx.tags.InputDecimal</cdk:component-family>
+            <cdk:renderer-type>com.skyworx.InputDecimalRenderer</cdk:renderer-type>
+        </component-extension>
+    </component>
+    <component>
+        <description>
+ @author ricko
+</description>
+        <component-type>com.skyworx.tags.InputDecimal</component-type>
+        <component-class>com.skyworx.tags.component.UIInputDecimal</component-class>
+        <property>
+            <description>The value binding expression used to wire up this
+            component to a component property of a JavaBean class</description>
+            <display-name></display-name>
+            <icon/>
+            <property-name>binding</property-name>
+            <property-class>javax.faces.component.UIComponent</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			The component identifier for this component. This value must be
+			unique within the closest parent component that is a naming
+			container.
+        </description>
+            <display-name>Component Identifier</display-name>
+            <icon/>
+            <property-name>id</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <description>
+			Flag indicating whether or not this component should be rendered
+			(during Render Response Phase), or processed on any subsequent
+			form submit. The default value for this property is true.
+        </description>
+            <display-name>Rendered Flag</display-name>
+            <icon/>
+            <property-name>rendered</property-name>
+            <property-class>boolean</property-class>
+            <default-value>Boolean.FALSE</default-value>
+            <property-extension>
+                <cdk:generate>false</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <property>
+            <property-name>onblur</property-name>
+            <property-class>java.lang.String</property-class>
+            <property-extension>
+                <cdk:event-name default="true">blur</cdk:event-name>
+                <cdk:generate>true</cdk:generate>
+                <cdk:hidden>false</cdk:hidden>
+                <cdk:literal>false</cdk:literal>
+                <cdk:pass-through>false</cdk:pass-through>
+                <cdk:read-only>false</cdk:read-only>
+                <cdk:required>false</cdk:required>
+            </property-extension>
+        </property>
+        <component-extension>
+            <cdk:base-class>com.skyworx.tags.AbstractInputDecimal</cdk:base-class>
+            <cdk:generate>true</cdk:generate>
+            <cdk:tag>
+                <cdk:generate>false</cdk:generate>
+                <cdk:tag-name>inputDecimal</cdk:tag-name>
+                <cdk:tag-type>Facelets</cdk:tag-type>
+            </cdk:tag>
+            <cdk:component-family>com.skyworx.tags.InputDecimal</cdk:component-family>
+            <cdk:renderer-type>com.skyworx.InputDecimalRenderer</cdk:renderer-type>
+        </component-extension>
+    </component>
+    <render-kit>
+        <render-kit-id>HTML_BASIC</render-kit-id>
+        <renderer>
+            <component-family>com.skyworx.tags.InputDecimal</component-family>
+            <renderer-type>com.skyworx.InputDecimalRenderer</renderer-type>
+            <renderer-class>com.skyworx.renderkit.InputDecimalRenderer</renderer-class>
+            <renderer-extension>
+                <cdk:renders-children>false</cdk:renders-children>
+            </renderer-extension>
+        </renderer>
+        <render-kit-extension/>
+    </render-kit>
+    <faces-config-extension>
+        <cdk:prefix>com.skyworx.tags</cdk:prefix>
+        <cdk:taglib>
+            <cdk:displayName>Skyworx Tags</cdk:displayName>
+            <cdk:shortName>sky</cdk:shortName>
+            <cdk:uri>http://skywox.co.id/tags</cdk:uri>
+        </cdk:taglib>
+    </faces-config-extension>
+</faces-config>

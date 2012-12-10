@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cdk:root xmlns="http://jboss.org/schema/richfaces/cdk/xhtml-el" 
+          xmlns:cdk="http://jboss.org/schema/richfaces/cdk/core"
+          xmlns:c="http://jboss.org/schema/richfaces/cdk/jstl/core" xmlns:cc="http://jboss.org/schema/richfaces/cdk/jsf/composite">
+
+    <cc:interface>
+        <cdk:class>com.skyworx.renderkit.InputDecimalRenderer</cdk:class>
+        <cdk:superclass>com.skyworx.renderkit.InputDecimalRendererBase</cdk:superclass>
+        <cdk:component-family>com.skyworx.Input</cdk:component-family>
+        <cdk:renderer-type>com.skyworx.InputDecimalRenderer</cdk:renderer-type>
+    </cc:interface>
+
+    <cc:implementation>
+        <input id="#{clientId}" 
+                   name="#{clientId}" 
+                   type="text"/>
+        <script type="text/javascript">
+            new RichFaces.ui.InputDecimal("#{clientId}");
+        </script>
+    </cc:implementation>
+
+</cdk:root>
